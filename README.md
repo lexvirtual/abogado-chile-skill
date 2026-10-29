@@ -1,19 +1,41 @@
 # Abogado Chile ⚖️🇨🇱
 
-> ⚠️ **Importante:** este skill entrega orientación legal y borradores, **no reemplaza a un abogado**. Antes de firmar, presentar un escrito o tomar una decisión, **consulta siempre con un abogado habilitado**. Si no puedes pagar uno, acude a la Corporación de Asistencia Judicial, la Defensoría Laboral, la Defensoría Penal Pública o una clínica jurídica universitaria.
+Conjunto de skills para asistentes de IA (Claude y Gemini) que actúan como **abogados expertos en derecho chileno**. Un skill general, **abogado-chile**, recibe el caso, lo clasifica y lo deriva a uno de **12 especialistas**.
 
-Skill para asistentes de IA (Claude y Gemini) que actúa como **abogado experto en todo el derecho chileno**, en el ámbito público y privado.
+Todos trabajan en dos fases:
 
-Trabaja en dos fases:
+1. **Explican tu caso**: qué pasa, qué derechos tienes, qué ley lo regula, qué han dicho tribunales y organismos, riesgos y pasos a seguir, con **alerta de plazos**.
+2. **Ofrecen redactar el documento**: escrito, recurso, descargos, reclamo, carta o correo, con instrucciones de cómo presentarlo.
 
-1. **Explica tu caso**: qué está pasando, qué derechos tienes, qué ley lo regula, qué han dicho los tribunales y los organismos, riesgos y pasos a seguir, con **alerta de plazos**.
-2. **Ofrece redactar el documento**: escrito, recurso de protección, descargos en sumario, presentación a Contraloría, reclamo a COMPIN o SUSESO, carta, correo, reclamo al SERNAC, borrador de demanda y más, con instrucciones de cómo presentarlo.
+## Los skills
 
-## Qué cubre
+| Carpeta | Título | Qué cubre |
+|---|---|---|
+| [`abogado-chile`](abogado-chile) | Abogado Chile (recepción) | Todas las áreas; clasifica el caso y deriva al especialista |
+| [`abogado-laboral-chile`](abogado-laboral-chile) | Abogado Laboral | Despidos, finiquitos, autodespido, nulidad del despido, tutela, Ley Karin, jornada de 42 horas |
+| [`abogado-licencias-seguridad-social`](abogado-licencias-seguridad-social) | Licencias Médicas y Seguridad Social | COMPIN, SUSESO, isapres, Fonasa, Ley 16.744, AFP, reforma de pensiones |
+| [`abogado-sumarios-funcionarios`](abogado-sumarios-funcionarios) | Sumarios y Funcionarios Públicos | Sumarios, investigaciones sumarias, descargos, contratas, reclamos ante Contraloría |
+| [`abogado-familia-chile`](abogado-familia-chile) | Abogado de Familia | Alimentos y su cobro (Ley 21.484), cuidado personal, divorcio, VIF, mediación |
+| [`abogado-consumidor-chile`](abogado-consumidor-chile) | Abogado del Consumidor | Garantía legal de 6 meses, retracto, SERNAC, Juzgado de Policía Local |
+| [`abogado-civil-chile`](abogado-civil-chile) | Abogado Civil | Contratos, indemnizaciones, herencias, posesión efectiva, juicios civiles |
+| [`abogado-arriendo-vivienda`](abogado-arriendo-vivienda) | Arriendo y Vivienda | Ley Devuélveme mi Casa, garantías, desalojo, copropiedad, compraventa |
+| [`abogado-deudas-insolvencia`](abogado-deudas-insolvencia) | Deudas e Insolvencia | Prescripción, cobranza, embargos, Registro de Deuda Consolidada, renegociación |
+| [`abogado-penal-chile`](abogado-penal-chile) | Abogado Penal | Víctimas e imputados, denuncia, querella, Defensoría de Víctimas (Ley 21.780) |
+| [`abogado-tributario-chile`](abogado-tributario-chile) | Abogado Tributario | SII, citaciones, liquidaciones, RAV, reclamo ante TTA, honorarios |
+| [`abogado-empresas-pymes`](abogado-empresas-pymes) | Empresas y Pymes | SpA, socios, contratos, cumplimiento, datos personales, insolvencia de empresas |
+| [`abogado-ambiental-urbanismo`](abogado-ambiental-urbanismo) | Ambiental y Urbanismo | SEIA, SMA, tribunales ambientales, permisos de edificación (Ley 21.826) |
 
-- **Áreas**: constitucional, civil, familia, laboral, seguridad social, penal, administrativo, tributario, comercial, consumidor, datos personales, libre competencia, propiedad intelectual, ambiental, urbanismo, recursos naturales, migración, indígena, electoral e internacional.
-- **Organismos**: tribunales, Contraloría, Dirección del Trabajo, SUSESO, COMPIN, superintendencias (Salud, Pensiones, Educación, SEC, SISS), SII, SERNAC, CMF, Consejo para la Transparencia, municipios, SEA y SMA, INAPI, Migraciones, Fiscalía y Defensoría.
-- **Fuentes oficiales**: LeyChile e Historia de la Ley (BCN), Cámara, Senado, Diario Oficial, Poder Judicial, Tribunal Constitucional, dictámenes de Contraloría, DT y SUSESO, entre otras.
+Se complementan con tres skills que ya existían: `abogada-derecho-administrativo-chile`, `solicitud-transparencia` y `datos-personales-21719`.
+
+## Qué trae cada especialista
+
+- Tabla de **datos verificados** en fuentes oficiales a octubre de 2026, con su norma o fuente.
+- Lista de **datos que siempre hay que volver a verificar**, porque no se pudieron confirmar o cambian seguido.
+- Procedimientos paso a paso y vías de reclamo.
+- **Errores frecuentes** que hacen perder casos.
+- **Checklist de documentos**.
+- **Modelos de escritos** listos para adaptar.
+- Ayuda gratuita disponible.
 
 ## Protocolo anti-error
 
@@ -30,33 +52,36 @@ Cada respuesta debe:
 ## Instalación
 
 ### Claude (claude.ai o app de escritorio)
-1. Descarga la carpeta [`abogado-chile`](abogado-chile) y comprímela en un `.zip`.
-2. En Claude, ve a **Configuración → Capacidades → Skills** y sube el `.zip`.
+1. Descarga cada carpeta y comprímela en un `.zip` (o usa los `.zip` de la carpeta `para-claude`).
+2. En Claude, ve a **Configuración → Capacidades → Skills** y sube cada `.zip`.
+3. Instala primero `abogado-chile` y luego los especialistas que quieras.
 
 ### Gemini
-1. Descarga la carpeta [`abogado-chile`](abogado-chile).
-2. En Gemini web, ve a **Configuración → Skills → Subir** y elige la carpeta (o el archivo `SKILL.md`).
+1. Descarga las carpetas.
+2. En Gemini web, ve a **Configuración → Skills → Subir** y elige cada carpeta (o su archivo `SKILL.md`).
 
 ### Claude Code
 ```bash
-git clone https://github.com/lexvirtual/abogado-chile-skill.git
-cp -r abogado-chile-skill/abogado-chile ~/.claude/skills/
+git clone https://github.com/manuvalenzu/abogado-chile-skill.git
+cp -r abogado-chile-skill/abogado-* ~/.claude/skills/
 ```
 
 ## Uso
 
-Cuenta tu caso con tus palabras. Para forzar el skill, escribe `/abogado-chile` al inicio:
+Cuenta tu caso con tus palabras. Para forzar el skill general, escribe `/abogado-chile` al inicio; para ir directo a un especialista, usa su nombre, por ejemplo `/abogado-laboral-chile`.
 
 ```
 /abogado-chile Trabajé 4 años en una empresa y ayer me despidieron por
 "necesidades de la empresa". Me deben dos meses de cotizaciones.
 ```
 
-Recibirás la explicación con normas, jurisprudencia, plazos y pasos, y al final un menú de documentos que puede redactar para ti.
+## Mantención
+
+Las leyes cambian. Cada especialista indica la fecha de su última verificación (octubre de 2026). Al actualizar un dato, cambia la tabla de datos verificados y deja la fuente oficial.
 
 ## Aviso legal
 
-Este skill **orienta, informa y redacta borradores**; no reemplaza la asesoría ni la representación de un abogado habilitado. Las respuestas de una IA pueden contener errores aunque se verifiquen las fuentes: revisa siempre los enlaces que entrega. Ante un juicio en curso, plazos por vencer, privación de libertad o montos relevantes, consulta a un abogado. Hay ayuda gratuita en la Corporación de Asistencia Judicial, la Defensoría Laboral, la Defensoría Penal Pública y las clínicas jurídicas universitarias.
+Estos skills **orientan, informan y redactan borradores**; no reemplazan la asesoría ni la representación de un abogado habilitado. Las respuestas de una IA pueden contener errores aunque se verifiquen las fuentes: revisa siempre los enlaces que entrega. Ante un juicio en curso, plazos por vencer, privación de libertad o montos relevantes, consulta a un abogado. Hay ayuda gratuita en la Corporación de Asistencia Judicial (en transición al Servicio Nacional de Acceso a la Justicia, Ley 21.780), la Defensoría Laboral, la Defensoría Penal Pública y las clínicas jurídicas universitarias.
 
 ## Contribuir
 
