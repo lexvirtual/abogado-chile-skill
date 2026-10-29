@@ -1,5 +1,7 @@
 # Abogado Chile ⚖️🇨🇱
 
+> ⚠️ **Importante:** estos skills entregan orientación legal y borradores, **no reemplazan a un abogado**. Antes de firmar, presentar un escrito o tomar una decisión, **consulta siempre con un abogado habilitado**. Si no puedes pagar uno, acude a la Corporación de Asistencia Judicial, la Defensoría Laboral, la Defensoría Penal Pública o una clínica jurídica universitaria.
+
 Conjunto de skills para asistentes de IA (Claude y Gemini) que actúan como **abogados expertos en derecho chileno**. Un skill general, **abogado-chile**, recibe el caso, lo clasifica y lo deriva a uno de **12 especialistas**.
 
 Todos trabajan en dos fases:
@@ -62,7 +64,7 @@ Cada respuesta debe:
 
 ### Claude Code
 ```bash
-git clone https://github.com/manuvalenzu/abogado-chile-skill.git
+git clone https://github.com/lexvirtual/abogado-chile-skill.git
 cp -r abogado-chile-skill/abogado-* ~/.claude/skills/
 ```
 
